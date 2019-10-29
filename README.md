@@ -1,2 +1,0 @@
-# Web Camps Challenge Entry
-
