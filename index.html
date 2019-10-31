@@ -1,132 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Web Camps 前端壓力鍋專案入口頁面</title>
-  <style>
-  #repo {
-    display: none;
-  }
-  #counter {
-    font-size: 48px;
-    color: red;
-  }
-  #time_process{
-    display: inline-block;
-    vertical-align: middle;
-    border: solid 1px #ccc;
-    border-radius: 99999px;
-    width: 300px;
-    height: 15px;
-    padding: 2px;
-    overflow: hidden;
-  }
-  #time_processing {
-    background-color: #8c8c8c;
-    /* width: 0%; */
-    height: 100%;
-    border-radius: 99999px;
-    font-size: 12px;
-    color: blue;
-    text-align: center;
-  }
-  </style>
-</head>
-<body>
-  <h1>Web camps 壓力鍋</h1>
-  <p>看見這一頁時，壓力鍋就已經開始了，你的時間分分秒秒的過去，你還要繼續等待嗎？<br />
-    展現積極的心與想完成任務的態度吧！</p>
-    <p>要記住<b>這是一場分組競賽</b>!!! 比別人快，就是你的優勢。</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Web Camps 前端壓力鍋專案入口頁面</title>
+    <style>
+      h2 {
+        border-top: 1px solid #ccc;
+        padding-top: 1em;
+      }
+      #repo {
+        display: none;
+      }
+      #counter {
+        font-size: 48px;
+        color: red;
+      }
+      #time_process {
+        display: inline-block;
+        vertical-align: middle;
+        border: solid 1px #ccc;
+        border-radius: 99999px;
+        width: 300px;
+        height: 15px;
+        padding: 2px;
+        overflow: hidden;
+      }
+      #time_processing {
+        background-color: #8c8c8c;
+        /* width: 0%; */
+        height: 100%;
+        border-radius: 99999px;
+        font-size: 12px;
+        color: blue;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Web camps 壓力鍋</h1>
+    <p>
+      看見這一頁時，<b>壓力鍋</b>就已經開始了，你的時間分分秒秒的過去，你還要繼續等待嗎？<br />
+      展現積極的心與想完成任務的態度吧！
+    </p>
+    <p>要記住<b>這是一場分組競賽</b>！！！比別人快，就是你的優勢。</p>
     <section class="case_description">
       <h2>案子內容</h2>
       <pre id="repo"></pre>
       <h3>案子的描述說明</h3>
-      <p>(任意寫)</p>
+      <p>根據「內容、功能」分別設計的「直、橫」排版組合開發功能，每位受測者依分配到的組合進行測試（舉例：文橫、功能橫），測試過程必須完成三項關卡中設置的任務，應用程式將會記錄三項任務完成的點擊次數與時間。</p>
+      <ol>
+        <li>選擇任務 => 直書/橫書（每個功能區塊有直與橫的排版差異）</li>
+        <li>電子書直橫排版都要能翻頁</li>
+        <li>畫重點</li>
+        <li>針對重點換色</li>
+        <li>針對重點寫筆記</li>
+        <li>記錄完成任務的時間與點擊次數</li>
+        <li>任務列表分為「完成」與「未完成」的狀態，點擊完成的任務要能看見紀錄</li>
+      </ol>
       <h3>案子的進行時間</h3>
-      預計進行時間: <span class="total_hours"></span> 小時 (到 <span class="end_datetime"></span> )
-      <div>專案從 公開 到 目前 已進行 <div id="time_process"><div id="time_processing">還沒公開哦!!</div></div></div>
+      預計進行時間: <span class="total_hours"></span> 小時 (到
+      <span class="end_datetime"></span> )
+      <div>
+        專案從 公開 到 目前 已進行
+        <div id="time_process">
+          <div id="time_processing">還沒公開哦～～～</div>
+        </div>
+      </div>
     </section>
     <div id="counter"></div>
     <section class="implementation">
+      <!-- 進行方式 -->
       <h2>進行方式</h2>
-      <h3>練習 scope</h3>
-      切版、直書，橫書<br />
-      JavaScript: DOM、event 操作
-      <h3>resource</h3>
-      <p>三人一組。
-      自己分配工作。</p>
+      <h3>練習 Scope</h3>
+      <ol>
+        <li>切版：直書，橫書</li>
+        <li>JavaScript：DOM、Event 操作</li>
+        <li>JSON：資料整理</li>
+      </ol>
+
+      <!-- 資源 -->
+      <h3>資源</h3>
+      <p>三人一組。 自己分配工作。</p>
       <h3>meeting 時間</h3>
       看進度 + 互相討論的時間
       <ul>
-        <li>2019/11/04 (一) 與業主的第一次親蜜接觸 meeting</li>
-        <li>2019/11/06 (三) 有問題問業主 meeting</li>
-        <li>2019/11/08 (五) 業主的初步看結果 meeting，討論優勝者獲得什麼</li>
-        <li>2019/11/11 (一) 業主驗收 meeting</li>
+        <li>2019/11/04 13:30 (一) 與業主的第一次親蜜接觸 meeting</li>
+        <li>2019/11/06 10:00 (三) 有問題問業主 meeting</li>
+        <li>
+          2019/11/08 17:00 (五) 業主的初步看結果 meeting，討論優勝者獲得什麼
+        </li>
+        <li>2019/11/11 17:00 (一) 業主驗收 meeting</li>
       </ul>
       <h3>驗收步驟</h3>
       <ul>
-        <li>使用業主提供的 git repo 並且開分支<br />
-          命名規則 <pre>年月_web_camp_pressure_game_隊名</pre>
-          (ex: 201911_web_camp_pressure_game_Lorem) </li>
-        <li>切好的版放在 gitlab page 展示，並在 readme 提供可以 demo 的 url 。</li>
+        <li>
+          使用業主提供的 git repo 並且開分支<br />
+          命名規則 <pre>年月_web_camp_pressure_game_隊名</pre> (ex:
+          201911_web_camp_pressure_game_Lorem)
+        </li>
+        <li>
+          切好的版放在 gitlab page 展示，並在 readme 提供可以 demo 的 url。
+        </li>
       </ul>
     </section>
-  <script src="https://rawgit.com/moment/moment/2.22.2/min/moment.min.js"></script>
-  <script>
-  const repo_url = 'git@gitlab.com:dwatow/quiz_web_layout.git';
-  const now = Date.now();
-  const begin_datetime = '2019-11-01 12:00:00';
-  const public_datetime = '2019-11-04 10:00:00';
-  const end_datetime = '2019-11-11 17:00:00';
-  // const begin_datetime = '2019-10-28 12:00:00';
-  // const public_datetime = '2019-10-29 15:00:00';
-  // const end_datetime = '2019-10-29 17:00:00';
+    <script src="https://rawgit.com/moment/moment/2.22.2/min/moment.min.js"></script>
+    <script>
+      const repo_url = 'git@gitlab.com:askiebaby/e-book.git';
+      const now = Date.now();
+      const begin_datetime = '2019-11-01 12:00:00';
+      const public_datetime = '2019-11-04 13:30:00';
+      const end_datetime = '2019-11-11 17:00:00';
+      // const begin_datetime = '2019-10-28 12:00:00';
+      // const public_datetime = '2019-10-29 15:00:00';
+      // const end_datetime = '2019-10-29 17:00:00';
 
+      // document.querySelectorAll('.begin_datetime').forEach(item => item.innerText = begin_datetime)
+      // document.querySelectorAll('.public_datetime').forEach(item => item.innerText = public_datetime)
+      document
+        .querySelectorAll('.end_datetime')
+        .forEach(item => (item.innerText = end_datetime));
+      document.querySelectorAll('.total_hours').forEach(item => {
+        item.innerText = moment(end_datetime).diff(
+          moment(begin_datetime),
+          'hours',
+        );
+      });
 
-  // document.querySelectorAll('.begin_datetime').forEach(item => item.innerText = begin_datetime)
-  // document.querySelectorAll('.public_datetime').forEach(item => item.innerText = public_datetime)
-  document.querySelectorAll('.end_datetime').forEach(item => item.innerText = end_datetime)
-  document.querySelectorAll('.total_hours').forEach(item => {
-    item.innerText = moment(end_datetime).diff(moment(begin_datetime), 'hours')
-    })
+      // var totalsec = moment(end_datetime).diff(moment(public_datetime), 'seconds');
+      // var diffsec = moment(end_datetime).diff(moment(now), 'seconds');
+      if (isPublish(end_datetime, public_datetime)) {
+        const processing = document.querySelector('#time_processing');
+        const processPercent = caseProcessPercents(
+          end_datetime,
+          public_datetime,
+        );
 
-    // var totalsec = moment(end_datetime).diff(moment(public_datetime), 'seconds');
-    // var diffsec = moment(end_datetime).diff(moment(now), 'seconds');
-  if (isPublish(end_datetime, public_datetime)) {
-    const processing = document.querySelector('#time_processing');
-    const processPercent = caseProcessPercents(end_datetime, public_datetime);
-    
-    processing.style.width = processPercent;
-    processing.innerText = processPercent;
-    document.querySelector('#repo').style.display = "block";
-    document.querySelector('#repo').innerText = 'git clone  ' + repo_url;
-  }
+        processing.style.width = processPercent;
+        processing.innerText = processPercent;
+        document.querySelector('#repo').style.display = 'block';
+        document.querySelector('#repo').innerText = 'git clone  ' + repo_url;
+      }
 
-  function isPublish (deallien, public_datetime) {
-    var totalsec = moment(deallien).diff(moment(public_datetime), 'seconds');
-    var diffsec = moment(deallien).diff(moment(now), 'seconds');
-    return diffsec < totalsec;
-  }
+      function isPublish(deallien, public_datetime) {
+        var totalsec = moment(deallien).diff(
+          moment(public_datetime),
+          'seconds',
+        );
+        var diffsec = moment(deallien).diff(moment(now), 'seconds');
+        return diffsec < totalsec;
+      }
 
-  function caseProcessPercents(deallien, public_datetime) {
-    var totalsec = moment(deallien).diff(moment(public_datetime), 'seconds');
-    var diffsec = moment(deallien).diff(moment(now), 'seconds');
-    return `${(100 - diffsec / totalsec * 100).toFixed(2)}%`
-  }
+      function caseProcessPercents(deallien, public_datetime) {
+        var totalsec = moment(deallien).diff(
+          moment(public_datetime),
+          'seconds',
+        );
+        var diffsec = moment(deallien).diff(moment(now), 'seconds');
+        return `${(100 - (diffsec / totalsec) * 100).toFixed(2)}%`;
+      }
 
-  setTimeout(()=> {
-    const counter = document.querySelector('#counter');
-    setInterval(() => {
-        var diff = moment(end_datetime).diff(Date.now());
-        var DD = moment(diff).format('DDD');
-        var hh = moment(diff).format('kk');
-        var mm = moment(diff).format('mm');
-        var ss = moment(diff).format('ss');
-        counter.innerHTML = `還剩下 ${DD} 天 ${hh}:${mm}:${ss}`;
-    }, 1000)
-  }, 0)
-  </script>
-</body>
+      setTimeout(() => {
+        const counter = document.querySelector('#counter');
+        setInterval(() => {
+          var diff = moment(end_datetime).diff(Date.now());
+          var DD = moment(diff).format('DDD');
+          var hh = moment(diff).format('kk');
+          var mm = moment(diff).format('mm');
+          var ss = moment(diff).format('ss');
+          counter.innerHTML = `還剩下 ${DD} 天 ${hh}:${mm}:${ss}`;
+        }, 1000);
+      }, 0);
+    </script>
+  </body>
 </html>
